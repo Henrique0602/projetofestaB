@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 
-//routes
+//rotas
 
 const authRouter = require("./routes/authRoutes");
 
@@ -24,6 +24,10 @@ app.use(express.static("public"));
 
 //atrelando a primeira rota
 app.use("/api/auth", authRouter);
+
+
+
+
 //conexao com o mongo
 
 mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`,{
